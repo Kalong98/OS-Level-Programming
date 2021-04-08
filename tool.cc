@@ -11,13 +11,16 @@ std::string translate(std::string line, std::string argument){
   return result; } 
 
 int main(int argc, char *argv[]) //argc is het aantal flags en argv de flags
-{ std::string line;
+{ 
+  std::string line;
 
   if(argc != 2)
   { std::cerr << "Deze functie heeft exact 1 argument nodig" << std::endl;
     return -1; }
 
-  while(std::getline(std::cin, line))
-  { std::cout << translate(line, argv[1]) << std::endl; } 
+  while(std::getline(std::cin, line)) { 
+    std::cout << translate(line, argv[1]) << std::endl; 
+  } 
 
-  return 0; }
+  return 0; 
+}
